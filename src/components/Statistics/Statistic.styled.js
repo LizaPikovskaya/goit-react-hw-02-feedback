@@ -16,6 +16,6 @@ export const List = styled.ul`
 
   p {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
   }
 `;

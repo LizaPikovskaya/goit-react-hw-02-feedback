@@ -1,5 +1,6 @@
 import { Text } from './Notification.styled';
 import { Section } from 'components/Section/Section';
+import PropTypes from 'prop-types';
 
 export const Notification = ({ message }) => {
   return (
@@ -8,3 +9,9 @@ export const Notification = ({ message }) => {
     </Section>
   );
 };
+
+
+Notification.propTypes = {
+  message: PropTypes.string,
+};
+

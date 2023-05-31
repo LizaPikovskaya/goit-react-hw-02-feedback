@@ -1,3 +1,4 @@
+
 import { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { GlobalStyle } from './Globalstyle';
@@ -10,7 +11,7 @@ export class App extends Component {
     bad: 0,
   };
   incrementGood = () => {
-    this.setState(prevState => ({ good: prevState.good + 1 }));
+  this.setState(prevState => ({ good: prevState.good + 1 }));
   };
 
   incrementNeutral = () =>

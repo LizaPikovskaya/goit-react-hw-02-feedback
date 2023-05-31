@@ -7,12 +7,13 @@ export const List = styled.ul`
 `;
 
 export const Button = styled.button`
-  padding: 10px;
-  min-width: 80px;
+  padding: 10px 5px;
+  min-width: 90px;
   border-radius: 5px;
   border: none;
   background-color: #4682b4;
   cursor: pointer;
+  font-size: 18px;
   font-weight: 600;
   transition: background-color 300ms linear;
   color: white;

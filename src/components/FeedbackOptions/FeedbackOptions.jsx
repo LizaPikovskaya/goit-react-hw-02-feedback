@@ -1,5 +1,6 @@
 import { Section } from 'components/Section/Section';
 import { Button, List } from './FeedbackOptions.styled';
+import  PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({
   incrementBad,
@@ -22,3 +23,11 @@ export const FeedbackOptions = ({
     </Section>
   );
 };
+
+
+FeedbackOptions.propTypes = {
+  incrementBad: PropTypes.func,
+  incrementGood: PropTypes.func,
+  incrementNeutral: PropTypes.func,
+};
+
