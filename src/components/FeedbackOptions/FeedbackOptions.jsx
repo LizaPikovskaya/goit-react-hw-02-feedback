@@ -3,21 +3,19 @@ import { Button, List } from './FeedbackOptions.styled';
 import  PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({
-  incrementBad,
-  incrementGood,
-  incrementNeutral,
+  incrementValue
 }) => {
   return (
     <Section title="Please leave feedback">
       <List>
         <li>
-          <Button onClick={() => incrementGood()}>Good</Button>
+          <Button onClick={() => incrementValue('good')}>Good</Button>
         </li>
         <li>
-          <Button onClick={() => incrementNeutral()}>Neutral</Button>
+          <Button onClick={() => incrementValue('neutral')}>Neutral</Button>
         </li>
         <li>
-          <Button onClick={() => incrementBad()}>Bad</Button>
+          <Button onClick={() => incrementValue('bad')}>Bad</Button>
         </li>
       </List>
     </Section>
@@ -26,8 +24,6 @@ export const FeedbackOptions = ({
 
 
 FeedbackOptions.propTypes = {
-  incrementBad: PropTypes.func,
-  incrementGood: PropTypes.func,
-  incrementNeutral: PropTypes.func,
+  incrementValue: PropTypes.func,
 };
 

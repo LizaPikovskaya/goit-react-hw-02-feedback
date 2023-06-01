@@ -1,4 +1,3 @@
-
 import { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { GlobalStyle } from './Globalstyle';
@@ -10,18 +9,9 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  incrementGood = () => {
-  this.setState(prevState => ({ good: prevState.good + 1 }));
+  incrementValue = type => {
+    this.setState(prevState => ({ [type]: prevState[type] + 1 }));
   };
-
-  incrementNeutral = () =>
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  incrementBad = () =>
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
 
   countTotalFeedback = () => {
     return Object.values(this.state).reduce((acc, number) => {
@@ -52,11 +42,7 @@ export class App extends Component {
     return (
       <>
         <GlobalStyle />
-        <FeedbackOptions
-          incrementGood={this.incrementGood}
-          incrementBad={this.incrementBad}
-          incrementNeutral={this.incrementNeutral}
-        />
+        <FeedbackOptions incrementValue={this.incrementValue} />
         {this.checkCondition()}
       </>
     );
